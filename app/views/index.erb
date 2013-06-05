@@ -1,0 +1,17 @@
+<div class="container">
+  <h1>MiniscURL</h1>
+  <br>
+  <% if @errors %>
+    <%= erb :_errors, locals: {errors: @errors} %>
+  <% end %>
+  <% if @short %>
+  <label for='short_url'>Miniscule URL:</label>
+    <input type='text' id='short_url' value="<%=@short%>">  
+  <%end %>
+  <br>
+  <form action='/urls' method='post'>
+    <label for='orginal_url'>Enter URL:</label>
+    <input type='text' id='original_url' name='url[original_url]'>
+    <input type='submit' value='Minisculize' class='submit_button'>
+  </form>
+</div>

@@ -1,0 +1,31 @@
+.container {
+  margin: 20px auto;
+  width: 600px;
+  padding: 0px 20px 20px 20px;
+  border: 1px dotted black;
+}
+
+th {
+  text-align: left;
+}
+
+h1, h2 {
+  text-align: center;
+}
+
+#counter {
+/*  width: 100%;
+  margin: 0 auto;*/
+  text-align: center;
+}
+
+#number {
+  font-size: 600px;
+  font-weight: bold;
+  margin: -100px;
+  padding: -100px;
+}
+
+#short_url {
+  margin-bottom: 50px;
+}
