@@ -1,5 +1,4 @@
 <div class="container">
-  <h1>MiniscURL</h1>
   <br>
   <% if @errors %>
     <%= erb :_errors, locals: {errors: @errors} %>
@@ -10,8 +9,10 @@
   <%end %>
   <br>
   <form action='/urls' method='post'>
-    <label for='orginal_url'>Enter URL:</label>
-    <input type='text' id='original_url' name='url[original_url]'>
-    <input type='submit' value='Minisculize' class='submit_button'>
+    <fieldset>
+      <p><label class="field" for='orginal_url'>Enter URL:</label>
+      <input class="text" type='text' id='original_url' name='url[original_url]'></p>
+      <input class="button" type='submit' value='Minisculize'>
+    </fieldset>
   </form>
 </div>

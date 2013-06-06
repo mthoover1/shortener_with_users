@@ -1,0 +1,20 @@
+<div class="container">
+  <h2>Login!</h2>
+
+  
+    <% if @errors %>
+      <%= erb :_errors, locals: {errors: @errors} %>
+    <% end %>
+
+  <div id="login">
+    <form action="/login" method="post" class="form">
+      <fieldset>
+        <p><label class="field" for="name">Name:</label>
+        <input class="text" type="text" id="name" name="user[name]" style="width=200px"></p>
+        <p><label class="field" for="password">Password:</label>
+        <input class="text" type="text" id="password" name="user[password]"></p>
+        <input class="button" type="submit" value="Login" class="submit-button">
+      </fieldset>
+    </form>
+  </div>
+</div>

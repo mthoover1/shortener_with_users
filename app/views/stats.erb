@@ -1,0 +1,17 @@
+<div class="container">
+  <% if @user.urls.empty? %>
+  <h2><%= @user.name %> has no links</h2>
+  <% end %>
+  <ul>
+    <% @user.urls.each do |url| %>
+    <li>
+      <a href="<%= "#{request_url}/#{url.short_url}" %>">
+        <%= "#{request_url}/#{url.short_url}" %></a> |
+      <a href="<%= url.original_url %>"><%= url.original_url %></a> 
+      <% if logged_in? && current_user == @user %>
+        | clicks: <%= url.click_count %>
+      <% end %>
+    </li>
+    <% end %>
+  </ul>
+</div>

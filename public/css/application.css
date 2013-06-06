@@ -1,8 +1,57 @@
+body {
+  background-color: lightblue;
+}
+
+a:link, a:visited {
+  color: black;
+}
+
+nav {
+  width: 800px;
+  margin: 20px auto;
+}
+
+nav div {
+  width: 800px;
+  margin: 20px auto;
+  text-align: center;
+}
+
 .container {
   margin: 20px auto;
-  width: 600px;
+  width: 800px;
   padding: 0px 20px 20px 20px;
-  border: 1px dotted black;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+fieldset {
+  width: 500px;
+  margin: 0 auto;
+  border: none;
+}
+
+fieldset p {
+  clear: both;
+  padding: 5px;
+}
+
+label.field {
+  text-align: right;
+  width: 250px;
+  float: left;
+  font-weight: bold;
+}
+
+input.text {
+  width: 500px;
+  float: left;
+}
+
+input.button {
+  clear: both;
+  float: right;
+  margin-top: 15px;
 }
 
 th {
@@ -20,10 +69,11 @@ h1, h2 {
 }
 
 #number {
-  font-size: 600px;
+  font-size: 800px;
   font-weight: bold;
   margin: -100px;
   padding: -100px;
+  color: darkred;
 }
 
 #short_url {

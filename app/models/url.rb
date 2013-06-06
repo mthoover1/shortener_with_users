@@ -1,4 +1,6 @@
 class Url < ActiveRecord::Base
+  belongs_to :user
+
   before_save :shorten_url
 
   validates :original_url, presence: true

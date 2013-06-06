@@ -18,6 +18,19 @@
   <title></title>
 </head>
 <body>
+  <nav>
+    <h1>MiniscURL</h1>
+    <div>
+      <a href="/">Home</a>
+      <% unless session[:user] %>
+        <a href="/signup">Sign Up</a>
+        <a href="/login">Login</a>
+      <% else %>
+        <a href="/users/<%= current_user.id %>">Profile</a>
+        <a href="/logout">Logout</a>
+      <% end %>
+    </div>
+  </nav>
   <%= yield %>
 </body>
 </html>
